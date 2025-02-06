@@ -4,10 +4,25 @@ import Navigation from "./Navigation.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<header class="bg-red-500 w-full">
-  <nav class="">
+<header class="">
+  <nav class="navbar bg-blue-500 w-full fixed transition-colors duration-300 ease-in-out">
     <Hamburger />
-    <ThemeIcon />
     <Navigation />
+    <ThemeIcon />
   </nav>
 </header>
+
+
+<script>
+window.onscroll = onScroll;
+
+function onScroll() {
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.body.classList.remove("scroll-top");
+  }
+  else {
+    document.body.classList.add("scroll-top");
+  }
+}
+</script>

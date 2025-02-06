@@ -13,9 +13,9 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="scroll-top">
     <Header />
-    <h1>{pageTitle}</h1>
+    <h2>{pageTitle}</h2>
     <slot />
     <Footer />
     <script>
