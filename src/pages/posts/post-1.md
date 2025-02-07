@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Lessons Learned: A Journey into React'
+title: 'Haunted by React: A Beginner''s Journey'
 pubDate: 2022-07-01
-description: "Reflecting on my experience with React as a beginner."
+description: "A Beginner's Reflections on the Power and Perils of React"
 author: "Astro Learner"
 image:
   url: "https://docs.astro.build/assets/rose.webp"

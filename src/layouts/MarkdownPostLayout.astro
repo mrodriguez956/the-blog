@@ -3,13 +3,17 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
+
+
 <BaseLayout pageTitle={frontmatter.title}>
+  <img class="py-20 mx-auto w-full h-50" src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} slot="header-image" />
   <p><em>{frontmatter.description}</em></p>
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+ 
+  <hr class="gradient-hr">
 
-  <p>Written by: {frontmatter.author}</p>
 
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+
 
   <div class="tags">
     {

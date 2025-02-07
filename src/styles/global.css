@@ -21,7 +21,7 @@ h2 {
    
   font-size: 2.5rem;
   */
-  padding-top: 200px;
+
   }
 
 /* nav styles */
@@ -117,4 +117,10 @@ html.dark {
   p { 
     @apply text-base; 
   }
+}
+
+.gradient-hr {
+  height: 5px; /* Adjust the height as needed */
+  border: none; /* Remove the default border */
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Your gradient colors */
 }
