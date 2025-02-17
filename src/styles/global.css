@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'VCR';  /* Changed to match font name */
+  src: url('/fonts/VCRosdNEUE.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PixelWide';  /* Changed to match font name */
+  src: url('/fonts/MultiTypePixelWide.otf') format('truetype');
+}
 
 html {
   background-color: #f1f5f9;
-  font-family: sans-serif;
+  font-family: 'PixelWide', sans-serif;
 }
 
 body {
   margin: 0 auto;
   width: 100%;
-  line-height: 1.5;
+  /*line-height: 1.5;*/
+  font-family: 'PixelWide', sans-serif;
 }
 
 * {
@@ -20,8 +29,9 @@ h2 {
   /* margin: 1rem 0;
    
   font-size: 2.5rem;
+  padding-top: 200px;
   */
-
+  
   }
 
 /* nav styles */
@@ -87,7 +97,7 @@ h2 {
 }
 
 html.dark {
-  background-color: #0d0950;
+  background-color: #232222;
   color: #fff;
 }
 
@@ -122,5 +132,5 @@ html.dark {
 .gradient-hr {
   height: 5px; /* Adjust the height as needed */
   border: none; /* Remove the default border */
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Your gradient colors */
+  background: linear-gradient(to right, #ffb83e, #f73333, #ff4ded, #3367f7); /* Your gradient colors */
 }
