@@ -1,20 +1,23 @@
-
+/* Import Tailwind CSS */
 @import "tailwindcss";
 
-
+/* Font Faces */
 @font-face {
-  font-family: 'VCR';  /* Changed to match font name */
+  font-family: 'VCR';
   src: url('/fonts/VCRosdNEUE.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: 'PixelWide';  /* Changed to match font name */
+  font-family: 'PixelWide';
   src: url('/fonts/MultiTypePixelWide.otf') format('truetype');
 }
+
 @font-face {
-  font-family: 'IBMPlex';  /* Changed to match font name */
+  font-family: 'IBMPlex';
   src: url('/fonts/IBMPlex-Regular.ttf') format('truetype');
 }
 
+/* Global Styles */
 html {
   background-color: #0f0f0f;
   color: white;
@@ -24,7 +27,6 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  /*line-height: 1.5;*/
   font-family: 'PixelWide', sans-serif;
 }
 
@@ -32,18 +34,25 @@ body {
   box-sizing: border-box;
 }
 
+/* Heading Styles */
+/*
+h1 {
+  @apply text-4xl md:text-6xl font-bold;
+}
+*/
 h2 {
-  /* margin: 1rem 0;
-    padding-top: 200px;
-  font-size: 2.5rem;
- 
-  */
- 
-  
-  }
+  @apply text-4xl font-semibold;
+}
 
-/* nav styles */
+h3 {
+  @apply text-xl;
+}
 
+p {
+  @apply text-base;
+}
+
+/* Navigation Styles */
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -104,6 +113,7 @@ h2 {
   }
 }
 
+/* Dark Mode Styles */
 html.dark {
   background-color: #232222;
   color: #fff;
@@ -113,45 +123,28 @@ html.dark {
   color: #fff;
 }
 
-.scroll-top .navbar
-{
+/* Scroll Top Navbar */
+.scroll-top .navbar {
   background-color: transparent !important;
 }
 
 .navbar {
-  height: 60px; /* Set the height of your navbar */
+  /* height: 60px; /* Set the height of your navbar */
 }
 
+/* Main Content */
 main {
   padding-top: 60px;
 }
 
-@layer base {
-  h1 { 
-    @apply text-4xl md:text-6xl font-bold; 
-  }
-
-  h2 { 
-    @apply text-4xl font-semibold; 
-  }
-
-  h3 {
-    @apply text-xl;
-
-  }
-
-  p { 
-    @apply text-base; 
-  }
-}
-
+/* Gradient Horizontal Rule */
 .gradient-hr {
   height: 5px; /* Adjust the height as needed */
   border: none; /* Remove the default border */
   background: linear-gradient(to right, #ffb83e, #f73333, #ff4ded, #3367f7); /* Your gradient colors */
 }
 
-.blog-font{
+/* Blog Font */
+.blog-font {
   font-family: 'IBMPlex', sans-serif;
-
 }

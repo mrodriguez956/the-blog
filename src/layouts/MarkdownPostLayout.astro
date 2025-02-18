@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import TagButton from "../components/TagButton.tsx"
+
 const { frontmatter } = Astro.props;
 
 ---
@@ -15,8 +16,7 @@ const { frontmatter } = Astro.props;
     {
       frontmatter.tags.map((tag: string) => (
         <p class="pr-2"> 
-          <TagButton tag={tag} client:only="react" />
-
+          <TagButton tag={tag} client:visible />
         </p>
       ))
     }
