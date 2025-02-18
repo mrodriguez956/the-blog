@@ -1,24 +1,27 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import TagButton from "../components/TagButton.tsx"
 const { frontmatter } = Astro.props;
----
 
+---
 
 
 <BaseLayout>
 
+  
   <img src={frontmatter.image.url}>
 
-  <div class="tags pt-[200px]">
+  <div class="tags">
     {
       frontmatter.tags.map((tag: string) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+        <p class="pr-2"> 
+          <TagButton tag={tag} client:only="react" />
+
         </p>
       ))
     }
   </div>
-  <div class="flex justify-between items-end px-3">
+  <div class="flex justify-between items-end px-5">
     <h1 class="text-4xl tracking-tight">{frontmatter.title}</h1>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   </div>
@@ -28,8 +31,11 @@ const { frontmatter } = Astro.props;
 
   <p class="px-3 pb-[50px]"><em>{frontmatter.description}</em></p>
 
+  <div class="blog-font px-[60px]">
   <slot/>
+</div>
 
+  <hr class="bg-black-500 mt-1">
 </BaseLayout>
 <style>
   a {

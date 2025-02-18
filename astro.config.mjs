@@ -10,13 +10,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [    
-    preact({
-      include: ['**/preact/*'],
-     }),
-    react({
-      include: ['**/react/*'],
-    }),],
+  integrations: 
+  [react()],
 
   vite: {
     plugins: [tailwindcss()],

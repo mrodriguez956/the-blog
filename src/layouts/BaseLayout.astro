@@ -16,8 +16,9 @@ const { pageTitle, blogImg } = Astro.props;
   <body class="scroll-top">
     <Header />
    
-    
-    <slot class="pt-5" />
+    <main>
+      <slot/>
+    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";

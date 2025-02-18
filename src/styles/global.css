@@ -1,4 +1,6 @@
+
 @import "tailwindcss";
+
 
 @font-face {
   font-family: 'VCR';  /* Changed to match font name */
@@ -8,9 +10,14 @@
   font-family: 'PixelWide';  /* Changed to match font name */
   src: url('/fonts/MultiTypePixelWide.otf') format('truetype');
 }
+@font-face {
+  font-family: 'IBMPlex';  /* Changed to match font name */
+  src: url('/fonts/IBMPlex-Regular.ttf') format('truetype');
+}
 
 html {
-  background-color: #f1f5f9;
+  background-color: #0f0f0f;
+  color: white;
   font-family: 'PixelWide', sans-serif;
 }
 
@@ -27,10 +34,11 @@ body {
 
 h2 {
   /* margin: 1rem 0;
-   
+    padding-top: 200px;
   font-size: 2.5rem;
-  padding-top: 200px;
+ 
   */
+ 
   
   }
 
@@ -110,6 +118,14 @@ html.dark {
   background-color: transparent !important;
 }
 
+.navbar {
+  height: 60px; /* Set the height of your navbar */
+}
+
+main {
+  padding-top: 60px;
+}
+
 @layer base {
   h1 { 
     @apply text-4xl md:text-6xl font-bold; 
@@ -133,4 +149,9 @@ html.dark {
   height: 5px; /* Adjust the height as needed */
   border: none; /* Remove the default border */
   background: linear-gradient(to right, #ffb83e, #f73333, #ff4ded, #3367f7); /* Your gradient colors */
+}
+
+.blog-font{
+  font-family: 'IBMPlex', sans-serif;
+
 }
