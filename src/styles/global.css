@@ -1,33 +1,42 @@
 /* Import Tailwind CSS */
 @import "tailwindcss";
+@import './fonts.css';
 
 /* Font Faces */
-@font-face {
-  font-family: 'VCR';
-  src: url('/fonts/VCRosdNEUE.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'PixelWide';
-  src: url('/fonts/MultiTypePixelWide.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'IBMPlex';
-  src: url('/fonts/IBMPlex-Regular.ttf') format('truetype');
-}
 
 /* Global Styles */
 html {
   background-color: #0f0f0f;
   color: white;
-  font-family: 'PixelWide', sans-serif;
+
 }
 
+/*
 body {
   margin: 0 auto;
   width: 100%;
   font-family: 'PixelWide', sans-serif;
+  
+}
+  */
+
+.index-bg {
+    background-image: url('https://images.unsplash.com/photo-1594434885674-0a15708152bf?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it covers the full viewport height */
+    justify-content: center;
+}
+
+.main-font {
+  font-family: 'PixelWide', sans-serif;
+}
+
+.sub-font {
+  font-family: 'Exo', sans-serif;
+
 }
 
 * {
@@ -36,6 +45,9 @@ body {
 
 /* Heading Styles */
 
+.front-page {
+  @apply text-[120px];
+}
 
 h1 {
   @apply text-4xl font-bold;
@@ -49,6 +61,8 @@ h3 {
   @apply text-lg;
 }
 
+
+
 p {
   @apply text-[16px];
  
@@ -56,12 +70,17 @@ p {
 
 .blog-header {
   @apply px-[120px];
+  font-family: 'PixelWide', sans-serif;
+  
+  
 
 }
 
 .blog-content {
   @apply px-[120px];
   @apply py-[80px];
+  
+  
 }
 
 /* Navigation Styles */
@@ -86,6 +105,8 @@ p {
   display: none;
   margin: 0;
 }
+
+
 
 .nav-links a {
   display: block;
@@ -142,22 +163,10 @@ html.dark {
 
 .navbar {
   /* height: 60px; /* Set the height of your navbar */
-}
+  background-color: #0f0f0f !important; 
+} 
 
-/* Main Content */
-main {
 
-}
-
-.test-bg{
-  background-color: rgb(2, 2, 2);
-
-}
-.test-fg
-{
-  background-color: #0f0f0f;
- max-width: 80%;
-}
 
 h3.subtitle
 {
@@ -180,7 +189,7 @@ hr.post-end
 
 /* Blog Font */
 .blog-content {
-  font-family: 'IBMPlex', sans-serif;
+  font-family: 'Exo', sans-serif;
 
 }
 .tags {
@@ -195,4 +204,8 @@ hr.post-end
   padding: 0.5em .5em;
   font-size: 5px;
   background-color: #f8fcfd;
+}
+
+h3.horror-subtitle {
+  @apply text-[40px];
 }

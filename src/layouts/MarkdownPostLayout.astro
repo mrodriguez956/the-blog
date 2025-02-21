@@ -6,8 +6,9 @@ const { frontmatter } = Astro.props;
 
 ---
 <BaseLayout>
-  <img src={frontmatter.image.url}>
-  <div class="tags gap-3 blog-header">
+  <img class="mt-[120px] w-full" src={frontmatter.image.url}>
+  
+  <div class="tags blog-header gap-3">
     {
       frontmatter.tags.map((tag: string) => (
         <p> 
@@ -23,9 +24,9 @@ const { frontmatter } = Astro.props;
  <hr class="gradient-hr">
  <h3 class="blog-header subtitle">{frontmatter.description}</h3>
 <div>
-  <div class="blog-content">
+  <main class="blog-content">
     <slot/>
-  </div>
+  </main>
 </div>
 
 </BaseLayout>

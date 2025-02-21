@@ -34,9 +34,10 @@ const textCase = "uppercase";
 
 <BaseLayout pageTitle={pageTitle}>
   
-  <main class="px-[120px]">
-  <h3>... and my new Astro site!</h3>
-
+  <main class="blog-content">
+  <h3 class="main-font">... and my new Astro site!</h3>
+    <div class="sub-font">
+    
   <p>
     I am working through Astro's introductory tutorial. This is the second page
     on my website, and it's the first one I built myself!
@@ -74,5 +75,6 @@ const textCase = "uppercase";
   <p>My skills are:</p><p></p><ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
+</div>
 </main>
 </BaseLayout>

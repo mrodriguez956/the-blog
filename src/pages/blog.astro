@@ -1,13 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import styles from '../styles/custom98.module.css';
 const pageTitle = "My Astro Learning Blog";
 const allPosts = Object.values(await import.meta.glob('./posts/*.md', { eager: true }));
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul class="grid grid-cols-4 text-center">
+
+  
+  <p class="sub-font">This is where I will post about my journey learning Astro.</p>
+  <ul class="grid grid-cols-4 text-center main-font">
+    
     {allPosts.map((post:any) => <BlogPost class="col-span-1" url={post.url} title={post.frontmatter.title} />)}
   </ul>
+
+  
+  
 </BaseLayout>
