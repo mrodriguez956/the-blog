@@ -5,54 +5,27 @@ import TagButton from "../components/TagButton.tsx"
 const { frontmatter } = Astro.props;
 
 ---
-
-
 <BaseLayout>
-
-  
   <img src={frontmatter.image.url}>
-
-  <div class="tags">
+  <div class="tags gap-3 blog-header">
     {
       frontmatter.tags.map((tag: string) => (
-        <p class="pr-2"> 
+        <p> 
           <TagButton tag={tag} client:visible />
         </p>
       ))
     }
   </div>
-  <div class="flex justify-between items-end px-5">
-    <h1 class="text-4xl tracking-tight">{frontmatter.title}</h1>
+  <div class="blog-header flex justify-between items-end">
+    <h1>{frontmatter.title}</h1>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   </div>
-  <hr class="gradient-hr mt-1">
-
-
-
-  <p class="px-3 pb-[50px]"><em>{frontmatter.description}</em></p>
-
-  <div class="blog-font px-[60px]">
-  <slot/>
+ <hr class="gradient-hr">
+ <h3 class="blog-header subtitle">{frontmatter.description}</h3>
+<div>
+  <div class="blog-content">
+    <slot/>
+  </div>
 </div>
 
-  <hr class="bg-black-500 mt-1">
 </BaseLayout>
-<style>
-  a {
-    color: #4841cc;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.4em;
-    padding: 0.5em .5em;
-    font-size: 15px;
-    background-color: #f8fcfd;
-  }
-</style>

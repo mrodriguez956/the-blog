@@ -4,11 +4,12 @@ import Navigation from "./Navigation.astro";
 ---
 
 <header>
-  <nav class="navbar bg-blue-500 fixed transition-colors duration-300 ease-in-out">
+  <nav class="navbar bg-blue-500 fixed transition-colors duration-300 ease-in-out w-full">
     <Hamburger />
     <Navigation />
   </nav>
 </header>
+
 
 
 <script>
@@ -16,7 +17,7 @@ window.onscroll = onScroll;
 
 function onScroll() {
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.body.classList.remove("scroll-top");
   }
   else {

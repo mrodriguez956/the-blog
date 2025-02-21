@@ -33,7 +33,9 @@ const textCase = "uppercase";
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>... and my new Astro site!</h2>
+  
+  <main class="px-[120px]">
+  <h3>... and my new Astro site!</h3>
 
   <p>
     I am working through Astro's introductory tutorial. This is the second page
@@ -72,4 +74,5 @@ const textCase = "uppercase";
   <p>My skills are:</p><p></p><ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
+</main>
 </BaseLayout>

@@ -79,16 +79,16 @@
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
-  src: url("fonts/converted/ms_sans_serif.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif.woff2") format("woff2");
+  src: url("/fonts/ms_sans_serif.woff") format("woff");
+  src: url("/fonts/ms_sans_serif.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
-  src: url("fonts/converted/ms_sans_serif_bold.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif_bold.woff2") format("woff2");
+  src: url("/fonts/converted/ms_sans_serif_bold.woff") format("woff");
+  src: url("/fonts/ms_sans_serif_bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -106,7 +106,7 @@ ul.tree-view,
 .title-bar {
   font-family: "Pixelated MS Sans Serif", Arial;
   -webkit-font-smoothing: none;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 u {
@@ -123,9 +123,9 @@ input[type="reset"] {
   text-shadow: 0 0 var(--text-color);
   background: var(--surface);
   box-shadow: var(--border-raised-outer), var(--border-raised-inner);
-  border-radius: 0;
+  border-radius: 3px;
 
-  min-width: 75px;
+  min-width: 65px;
   min-height: 23px;
   padding: 0 12px;
 }

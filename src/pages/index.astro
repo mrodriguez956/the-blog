@@ -4,8 +4,8 @@ import Greeting from '../components/Greeting';
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <div class="flex flex-col items-center justify-center">
-  <h2 class="text-8xl">HELLO <blink> WORLD <blink/></h2>
+  <div class="flex flex-col items-center">
+  <h2 class="text-8xl">HELLO WORLD </h2>
   <Greeting client:load messages={["Debugging the Damned", "The 404 Zone Awaits", "The Code is Cursed", "A Nightmare on Code Street"]} />
 </div>
 </BaseLayout>

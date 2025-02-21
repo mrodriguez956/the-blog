@@ -35,21 +35,33 @@ body {
 }
 
 /* Heading Styles */
-/*
+
+
 h1 {
-  @apply text-4xl md:text-6xl font-bold;
+  @apply text-4xl font-bold;
 }
-*/
+
 h2 {
-  @apply text-4xl font-semibold;
+  @apply text-2xl font-bold;
 }
 
 h3 {
-  @apply text-xl;
+  @apply text-lg;
 }
 
 p {
-  @apply text-base;
+  @apply text-[16px];
+ 
+}
+
+.blog-header {
+  @apply px-[120px];
+
+}
+
+.blog-content {
+  @apply px-[120px];
+  @apply py-[80px];
 }
 
 /* Navigation Styles */
@@ -134,17 +146,53 @@ html.dark {
 
 /* Main Content */
 main {
-  padding-top: 60px;
+
+}
+
+.test-bg{
+  background-color: rgb(2, 2, 2);
+
+}
+.test-fg
+{
+  background-color: #0f0f0f;
+ max-width: 80%;
+}
+
+h3.subtitle
+{
+  color: #b8bbc6;
+  font-style: italic;
 }
 
 /* Gradient Horizontal Rule */
-.gradient-hr {
+hr.gradient-hr {
   height: 5px; /* Adjust the height as needed */
   border: none; /* Remove the default border */
   background: linear-gradient(to right, #ffb83e, #f73333, #ff4ded, #3367f7); /* Your gradient colors */
+  margin-top: 6px;
+}
+
+hr.post-end
+{
+  margin: 20px 0 20px 0;
 }
 
 /* Blog Font */
-.blog-font {
+.blog-content {
   font-family: 'IBMPlex', sans-serif;
+
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0.25em;
+  border: dotted 1px #a1a1a1;
+  border-radius: 0.4em;
+  padding: 0.5em .5em;
+  font-size: 5px;
+  background-color: #f8fcfd;
 }

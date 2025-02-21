@@ -1,72 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Haunted by React: A Beginner''s Journey'
+title: 'Haunted by React'
 pubDate: 2022-07-01
 description: "A Beginner's Reflections on the Power and Perils of React"
 author: "Astro Learner"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "/images/scary-react.jpg"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-### Welcome to my new blog
+ ### <h2> Well this is awkward... </h2>
 
-The dust is still settling and there isn't a real timeline where this dust will ever **truly** settle. But my blog is finally here! 
 
-The current plan for this blog is to document my journey through web development. I've got plenty of ideas that I am excited to share and the process of bringing these ideas to life will come with its own set of challenges.  
 
-### Wait... Who am I?    
+<p> After fully learning the basics of Web Development and becoming comfortable with JavaScript, I consistently found myself pondering "What's next?". I mean I learned the basics all the day up to JavaScript, but those are clearly not the only tools a talented web developer uses to build such awesome webpages. It has always been very apparent to me that everyone isn't just building these websites and all the fancy bells and whistles from *scratch*, so what ARE they using? This is what led me to a fork in the road, choosing a "Stack". </p>
 
-Oh... right... you have no idea who I am or what to expect from my creations.   
-
-My name is Michael, I am 29 years old and have dabbled in web development for *years* now, but have recently decided to take it more seriously for just shy of 2 years. University is expensive, so while I have taken a few Comp Sci classes, most of what you will see in my projects is self taught. 
-
-If you explore my projects, you will (hopefully) notice a pattern. I have a longing for the return of the 90's. Shopping malls, VHS tapes, websites, all these things just had so much more personality. 
-
-My goal with any of my projects is to capture that nostalgic feeling in a more modern package. With that being said, I am still trying to capture this vibe more consistently. So please bear with me while I try to hone my own unique theme. 
-### Welcome to my new blog
-
-The dust is still settling and there isn't a real timeline where this dust will ever **truly** settle. But my blog is finally here! 
-
-The current plan for this blog is to document my journey through web development. I've got plenty of ideas that I am excited to share and the process of bringing these ideas to life will come with its own set of challenges.  
-
-### Wait... Who am I?    
-
-Oh... right... you have no idea who I am or what to expect from my creations.   
-
-My name is Michael, I am 29 years old and have dabbled in web development for *years* now, but have recently decided to take it more seriously for just shy of 2 years. University is expensive, so while I have taken a few Comp Sci classes, most of what you will see in my projects is self taught. 
-
-If you explore my projects, you will (hopefully) notice a pattern. I have a longing for the return of the 90's. Shopping malls, VHS tapes, websites, all these things just had so much more personality. 
-
-My goal with any of my projects is to capture that nostalgic feeling in a more modern package. With that being said, I am still trying to capture this vibe more consistently. So please bear with me while I try to hone my own unique theme. 
-### Welcome to my new blog
-
-The dust is still settling and there isn't a real timeline where this dust will ever **truly** settle. But my blog is finally here! 
-
-The current plan for this blog is to document my journey through web development. I've got plenty of ideas that I am excited to share and the process of bringing these ideas to life will come with its own set of challenges.  
-
-### Wait... Who am I?    
-
-Oh... right... you have no idea who I am or what to expect from my creations.   
-
-My name is Michael, I am 29 years old and have dabbled in web development for *years* now, but have recently decided to take it more seriously for just shy of 2 years. University is expensive, so while I have taken a few Comp Sci classes, most of what you will see in my projects is self taught. 
-
-If you explore my projects, you will (hopefully) notice a pattern. I have a longing for the return of the 90's. Shopping malls, VHS tapes, websites, all these things just had so much more personality. 
-
-My goal with any of my projects is to capture that nostalgic feeling in a more modern package. With that being said, I am still trying to capture this vibe more consistently. So please bear with me while I try to hone my own unique theme. 
-### Welcome to my new blog
-
-The dust is still settling and there isn't a real timeline where this dust will ever **truly** settle. But my blog is finally here! 
-
-The current plan for this blog is to document my journey through web development. I've got plenty of ideas that I am excited to share and the process of bringing these ideas to life will come with its own set of challenges.  
-
-### Wait... Who am I?    
-
-Oh... right... you have no idea who I am or what to expect from my creations.   
-
-My name is Michael, I am 29 years old and have dabbled in web development for *years* now, but have recently decided to take it more seriously for just shy of 2 years. University is expensive, so while I have taken a few Comp Sci classes, most of what you will see in my projects is self taught. 
-
-If you explore my projects, you will (hopefully) notice a pattern. I have a longing for the return of the 90's. Shopping malls, VHS tapes, websites, all these things just had so much more personality. 
-
-My goal with any of my projects is to capture that nostalgic feeling in a more modern package. With that being said, I am still trying to capture this vibe more consistently. So please bear with me while I try to hone my own unique theme. 
