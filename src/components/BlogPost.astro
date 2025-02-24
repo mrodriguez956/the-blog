@@ -1,9 +1,18 @@
 ---
-const { title, url } = Astro.props
+const { title, url, img} = Astro.props
 import styles from '../styles/custom98.module.css';
 
 
 ---
-<li><a href={url}>{title}</a></li>
+<div class="">
+    <a href={url}>
+        <img src={img} alt={title} class="h-50 w-full rounded-t-lg object-cover"> {/* Image with rounded top */}
+        <div class="p-4"> {/* Padding for the title */}
+          <h3 class="font-bold text-lg">{title}</h3> {/* Title */}
+           {/* Add other post information here if needed */}
+        </div>
+      </a>
+
+</div>
 
 
