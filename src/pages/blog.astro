@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import TagButton from "../components/TagButton.tsx"
 import styles from '../styles/custom98.module.css';
 const pageTitle = "My Astro Learning Blog";
 const allPosts = Object.values(await import.meta.glob('./posts/*.md', { eager: true }));
@@ -14,8 +15,8 @@ const tags = [
   <div class="tags flex justify-center py-9">
     {
       tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+      <p> 
+          <TagButton tag={tag} client:visible />
         </p>
       ))
     }
