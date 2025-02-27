@@ -15,11 +15,12 @@ const { pageTitle, blogImg } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="scroll-top flex flex-col h-screen justify-between">
+  <body class="scroll-top h-full flex flex-col">
     <Header />
    
-    <main>
+    <main class="flex-grow"> 
       <slot/>
+      
     </main>
     <Footer />
     <script>

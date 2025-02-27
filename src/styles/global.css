@@ -11,6 +11,11 @@ html {
 
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 /*
 body {
   margin: 0 auto;
@@ -26,8 +31,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Ensure it covers the full viewport height */
-    justify-content: center;
+    /* Ensure it covers the full viewport height */       
+    @apply h-full;
+
+    transform: scale(0.8);
+    border-color: #f73333;
+    border-width: 2px;
 }
 
 .main-font {
