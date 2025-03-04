@@ -12,7 +12,13 @@ const tags = [
 
 <BaseLayout pageTitle={pageTitle}>
 
-  <div class="tags flex justify-center py-9">
+
+
+  <div class="main-title flex justify-between items-end mb-[10px]">
+
+  <h2 class="main-font text-center pt-[80px] ">ALL POSTS</h2>
+
+  <div class="tags flex justify-center">
     {
       tags.map((tag) => (
       <p> 
@@ -21,15 +27,16 @@ const tags = [
       ))
     }
   </div>
-  
-  <p class="sub-font text-center">This is where I will post about my journey learning Astro.</p>
-  <div class="grid grid-cols-3 text-center main-font gap-4 px-[120px]">
+  </div>
+
+  <div class="page-line blog"></div>  
+ 
+  <div class="grid grid-cols-3 text-center main-font gap-4 px-[120px] py-[80px]">
     
     {allPosts.map((post:any) => <BlogPost class="" img={post.frontmatter.image.url} url={post.url} title={post.frontmatter.title} />)}
   
   </div>
 
-  
   
 </BaseLayout>
 

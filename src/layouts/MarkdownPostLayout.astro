@@ -6,9 +6,9 @@ const { frontmatter } = Astro.props;
 
 ---
 <BaseLayout>
-  <img class="w-full" src={frontmatter.image.url}>
+  <img class="w-full h-[240px] md:h-[480px] lg:h-[600px] object-cover object-center" src={frontmatter.image.url}>
   
-  <div class="tags blog-header gap-3">
+  <div class="tags px-[120px] pt-[10px] gap-3">
     {
       frontmatter.tags.map((tag: string) => (
         <p> 
@@ -17,12 +17,12 @@ const { frontmatter } = Astro.props;
       ))
     }
   </div>
-  <div class="blog-header flex justify-between items-end">
+  <div class="flex main-title justify-between items-end">
     <h1>{frontmatter.title}</h1>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   </div>
  <hr class="gradient-hr">
- <h3 class="blog-header subtitle">{frontmatter.description}</h3>
+ <h3 class="subtitle">{frontmatter.description}</h3>
 <div>
   <main class="blog-content">
     <slot/>
