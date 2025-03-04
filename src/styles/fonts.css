@@ -1,31 +1,31 @@
 @font-face {
     font-family: "Pixelated MS Sans Serif";
-    src: url("/fonts/ms_sans_serif.woff") format("woff");
-    src: url("/fonts/ms_sans_serif.woff2") format("woff2");
+    src: url("/the-blog/fonts/ms_sans_serif.woff") format("woff");
+    src: url("/the-blog/fonts/ms_sans_serif.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Pixelated MS Sans Serif";
-    src: url("/fonts/converted/ms_sans_serif_bold.woff") format("woff");
-    src: url("/fonts/ms_sans_serif_bold.woff2") format("woff2");
+    src: url("/the-blog/fonts/converted/ms_sans_serif_bold.woff") format("woff");
+    src: url("/the-blog/fonts/ms_sans_serif_bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'VCR';
-    src: url('/fonts/VCRosdNEUE.ttf') format('truetype');
+    src: url('/the-blog/fonts/VCRosdNEUE.ttf') format('truetype');
   }
   
   @font-face {
     font-family: 'PixelWide';
-    src: url('/fonts/MultiTypePixelWide.otf') format('truetype');
+    src: url('/the-blog/fonts/MultiTypePixelWide.otf') format('truetype');
   }
   
   @font-face {
     font-family: 'Exo';
-    src: url('/fonts/Exo2.ttf') format('truetype');
+    src: url('/the-blog/fonts/Exo2.ttf') format('truetype');
   }
   
