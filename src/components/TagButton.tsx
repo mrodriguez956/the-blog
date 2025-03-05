@@ -5,7 +5,7 @@ import styles from '../styles/custom98.module.css';
 function ButtonComponent({ tag }: { tag: string }) {
     return (
         <>
-      <button onClick={() => window.location.href = `/tags/${tag}`}>{tag}</button>
+      <button onClick={() => window.location.href = `/the-blog/tags/${tag}`}>{tag}</button>
 
 
         </>

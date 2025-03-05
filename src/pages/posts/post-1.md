@@ -5,7 +5,7 @@ pubDate: 2022-07-01
 description: "A Beginner's Reflections on the Power and Perils of React"
 author: "Astro Learner"
 image:
-  url: "/images/scary-react.jpg"
+  url: "/the-blog/images/scary-react.jpg"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["astro", "blogging", "learning in public"]
 ---
