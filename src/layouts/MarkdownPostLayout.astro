@@ -21,7 +21,7 @@ const { frontmatter } = Astro.props;
     <h1>{frontmatter.title}</h1>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   </div>
- <hr class="gradient-hr">
+<div class="page-line blog"></div> 
  <h3 class="subtitle">{frontmatter.description}</h3>
 <div>
   <main class="blog-content">

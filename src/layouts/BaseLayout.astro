@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import styles from '../styles/custom98test.module.css';
+
 import "../styles/global.css";
 const { pageTitle, blogImg } = Astro.props;
 ---
@@ -18,10 +20,7 @@ const { pageTitle, blogImg } = Astro.props;
   <body class="scroll-top h-full flex flex-col">
     <Header />
    
-    <main class="flex-grow"> 
       <slot/>
-      
-    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";

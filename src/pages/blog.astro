@@ -1,8 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
-import TagButton from "../components/TagButton.tsx"
-import styles from '../styles/custom98.module.css';
+import TagButton from "../components/TagButton.tsx";
+import DropdownButton from "../components/TagDropdown.tsx"
+import styles from '../styles/custom98test.module.css';
+
 const pageTitle = "My Astro Learning Blog";
 const allPosts = Object.values(await import.meta.glob('./posts/*.md', { eager: true }));
 const tags = [
@@ -16,25 +18,41 @@ const tags = [
 
   <div class="main-title flex justify-between items-end mb-[10px]">
 
-  <h2 class="main-font text-center pt-[80px] ">ALL POSTS</h2>
+  <h2 class="main-font text-center pt-[80px]">ALL POSTS</h2>
 
-  <div class="tags flex justify-center">
+  <div class="tags justify-center">
     {
       tags.map((tag) => (
       <p> 
           <TagButton tag={tag} client:visible />
         </p>
+   
       ))
+
+
     }
+
+<select class="flex lg:hidden">
+  <option selected>- by Tag -</option>
+  {
+  tags.map((tag) => (
+  
+  <DropdownButton tag={tag} client:visible />
+
+))
+  }
+  </select>
+
+
   </div>
   </div>
 
   <div class="page-line blog"></div>  
  
-  <div class="grid grid-cols-3 text-center main-font gap-4 px-[120px] py-[80px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center main-font gap-4 px-[20px] md:px-[120px] py-[80px]">
     
     {allPosts.map((post:any) => <BlogPost class="" img={post.frontmatter.image.url} url={post.url} title={post.frontmatter.title} />)}
-  
+
   </div>
 
   

@@ -2,17 +2,16 @@
 import styles from '../styles/custom98test.module.css';
 
 
-function ButtonComponent({ tag }: { tag: string }) {
+function DropDownComponent({ tag }: { tag: string }) {
     return (
         <>
-      <button className="hidden lg:flex" onClick={() => window.location.href = `/the-blog/tags/${tag}`}>{tag}</button>
-
+           <option> {tag} </option>
 
         </>
     );
 };
 
-export default ButtonComponent;
+export default DropDownComponent;
 
 /*    <ThemeProvider theme={coldGray}>
       <Button onClick={() => window.location.href = `/tags/${tag}`} size='sm'>

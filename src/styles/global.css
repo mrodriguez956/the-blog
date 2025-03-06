@@ -36,6 +36,7 @@ body {
 }
   */
 
+
   body{
   
     background: var(--dark-color);
@@ -93,7 +94,7 @@ body {
 /* Heading Styles */
 
 .front-page {
-  @apply text-[120px];
+  @apply text-[40px] sm:text-[70px] lg:text-[90px] xl:text-[120px];
 }
 
 h1 {
@@ -108,6 +109,9 @@ h3 {
   @apply text-lg;
 }
 
+select {
+  @apply w-[120px] sm:w-[200px];
+}
 
 
 p {
@@ -120,7 +124,7 @@ p {
 }
 
 .main-title, .subtitle{
-  @apply px-[120px];
+  @apply px-[40px] sm:px-[80px] md:px-[120px];
   font-family: 'PixelWide', sans-serif;
 
 }
@@ -133,8 +137,8 @@ p {
 }
 
 .blog-content {
-  @apply px-[120px];
-  @apply py-[80px];
+  @apply px-[40px] sm:px-[80px] md:px-[120px];
+  @apply py-[60px];
   
   
 }
@@ -154,10 +158,12 @@ p {
 }
 
 .nav-links {
-
+  display: none; /* Hide by default */
 }
 
-
+.nav-open {
+  background-color: black;
+}
 
 .nav-links a {
   display: block;
@@ -182,7 +188,9 @@ p {
 
 
 .expanded {
-  display: unset;
+  display: block;
+  background-color: #0f0f0f;
+
 }
 
 @media screen and (min-width: 636px) {
@@ -223,9 +231,12 @@ html.dark {
 .navbar {
   /* height: 60px; /* Set the height of your navbar */
   background-color: #0f0f0f !important; 
+  z-index: 1000;
 } 
 
-
+.navbar.nav-open {
+  background-color: black; /* Background when open */
+}
 
 
 /* Gradient Horizontal Rule */
@@ -261,7 +272,7 @@ hr.post-end
 }
 
 h3.horror-subtitle {
-  @apply text-[40px];
+  @apply text-[20px] md:text-[30px] lg:text-[40px];
 }
 
 .cursor {

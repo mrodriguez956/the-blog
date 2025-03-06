@@ -10,7 +10,7 @@ export default function Greeting({ messages }) {
     <div className='text-center'>
       <h3 className="horror-subtitle">{greeting}</h3>
       <button onClick={() => setGreeting(randomMessage())}>
-        New Greeting
+        🔄️
       </button>
     </div>
   );
