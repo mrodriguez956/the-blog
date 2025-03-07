@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout>
   <img class="w-full h-[240px] md:h-[480px] lg:h-[600px] object-cover object-center" src={frontmatter.image.url}>
-  
+  <div class="xl:px-[60px]">
   <div class="tags px-[120px] pt-[10px] gap-3">
     {
       frontmatter.tags.map((tag: string) => (
@@ -17,12 +17,17 @@ const { frontmatter } = Astro.props;
       ))
     }
   </div>
-  <div class="flex main-title justify-between items-end">
+
+  
+    <div class="flex main-title justify-between items-end">
     <h1>{frontmatter.title}</h1>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   </div>
-<div class="page-line blog"></div> 
+</div>
+  <div class="page-line blog"></div> 
+  <div class="xl:px-[60px]">
  <h3 class="subtitle">{frontmatter.description}</h3>
+</div>
 <div>
   <main class="blog-content">
     <slot/>

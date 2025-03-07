@@ -76,6 +76,8 @@ body {
     border-image: linear-gradient(75deg, #872bff, #832bff, #3367f7) 2;
     border-image-slice: 1;
     transform: scale(0.86);
+    
+    
 }
 
 .main-font {
