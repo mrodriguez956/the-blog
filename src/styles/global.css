@@ -101,6 +101,9 @@ p {
   /*@apply text-[16px];*/
 }
 
+.page-scaling{
+  @apply px-[20px] md:px-[120px];
+}
 .post-title {
   @apply py-[5px];
 }
@@ -234,7 +237,7 @@ hr.gradient-hr {
 /* Blog Font */
 .post-content {
   font-family: "Exo", sans-serif;
-  @apply px-[120px];
+  
   @apply py-[60px];
 }
 .tags {

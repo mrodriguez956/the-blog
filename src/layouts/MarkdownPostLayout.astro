@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
     class="w-full h-[240px] md:h-[480px] lg:h-[600px] object-cover object-center"
     src={frontmatter.image.url}
   />
-  <div class="px-[120px]">
+  <div class="page-scaling">
     <div class="tags pt-[10px] gap-3">
       {
         frontmatter.tags.map((tag: string) => (
@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props;
   </div>
 </div>
   <div>
-    <main class="post-content">
+    <main class="post-content page-scaling">
       <slot />
     </main>
   </div>
