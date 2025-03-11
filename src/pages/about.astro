@@ -33,52 +33,54 @@ const textCase = "uppercase";
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-<div class="main-title">
+  <div class="page-title">
+    <h2 class="pt-[80px] mb-[10px]">About Me</h2>
+  </div>
+  <div class="page-line about"></div>
+  <div class="post-content sub-font">
+    <p>
+      Welcome to my little corner of the web. I'm a self-taught web developer
+      with a penchant for all things spooky. I'm constantly learning and
+      experimenting with new technologies (HTML, CSS, JavaScript, Tailwind,
+      React – the list keeps growing!), and this blog is where I document the
+      journey. Stick around, it might get a little weird...
+    </p>
 
+    <p>
+      For about two years now, I've been diving headfirst into the world of
+      code, bridging my love for horror flicks and gaming with the digital
+      realm. Think 90s nostalgia meets modern web dev.
+    </p>
 
+    {happy && <p>I am happy to be learning Astro!</p>}
 
-  <h2 class="main-font pt-[80px] mb-[10px]">About Me</h2>
-  
-</div>
-    <div class="page-line about"></div>
-    <div class="blog-content sub-font">
-    
-  <p>
-    Welcome to my little corner of the web. I'm a self-taught web developer with a penchant for all things spooky.  
-    
-    I'm constantly learning and experimenting with new technologies (HTML, CSS, JavaScript, Tailwind, React – the list keeps growing!), and this blog is where I document the journey.  Stick around, it might get a little weird...
-  </p>
+    {finished && <p>I finished this tutorial!</p>}
 
-  <p>
-    For about two years now, I've been diving headfirst into the world of code, bridging my love for horror flicks and gaming with the digital realm.  Think 90s nostalgia meets modern web dev.  
-  </p>
-
-  {happy && <p>I am happy to be learning Astro!</p>}
-
-  {finished && <p>I finished this tutorial!</p>}
-
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
-    )
-  }
-
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
     {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-        </li>
+      goal === 3 ? (
+        <p>My goal is to finish in 3 days.</p>
+      ) : (
+        <p>My goal is not 3 days.</p>
       )
     }
-  </ul>
-  <p>My skills are:</p><p></p><ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-</div>
+
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>
+        I live in {identity.country} and I work as a {identity.occupation}.
+      </li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            Two of my hobbies are: {identity.hobbies[0]} and{" "}
+            {identity.hobbies[1]}
+          </li>
+        )
+      }
+    </ul>
+    <p>My skills are:</p><p></p><ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+  </div>
 </BaseLayout>

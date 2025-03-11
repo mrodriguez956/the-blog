@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Haunted by React'
-pubDate: 2022-07-01
+pubDate: 3-07-2025
 description: "A Beginner's Reflections on the Power and Perils of React"
 author: "Astro Learner"
 image:
