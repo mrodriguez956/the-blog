@@ -60,15 +60,15 @@ body {
   border-top: 5px double transparent;
   border-image: linear-gradient(75deg, #ff2bae, #872bff) 2;
   border-image-slice: 1;
-  transform: scale(0.86);
+  
+
 }
 
 .page-line.blog {
   border-top: 5px double transparent;
   border-image: linear-gradient(75deg, #872bff, #832bff, #3367f7) 2;
   border-image-slice: 1;
-  width: 100%;
-  display: block;
+
 }
 
 * {
@@ -234,7 +234,7 @@ hr.gradient-hr {
 /* Blog Font */
 .post-content {
   font-family: "Exo", sans-serif;
-  @apply px-[40px] sm:px-[80px] md:px-[120px];
+  @apply px-[120px];
   @apply py-[60px];
 }
 .tags {

@@ -10,8 +10,8 @@ const { frontmatter } = Astro.props;
     class="w-full h-[240px] md:h-[480px] lg:h-[600px] object-cover object-center"
     src={frontmatter.image.url}
   />
-  <div class="xl:px-[60px]">
-    <div class="tags px-[120px] pt-[10px] gap-3">
+  <div class="px-[120px]">
+    <div class="tags pt-[10px] gap-3">
       {
         frontmatter.tags.map((tag: string) => (
           <p>
@@ -20,16 +20,16 @@ const { frontmatter } = Astro.props;
         ))
       }
     </div>
-    <div class="w-full max-w-[1200px] mx-auto">
+    <div class="">
     <div class="flex post-title justify-between items-end">
       <h1>{frontmatter.title}</h1>
       <p class="post-date">{frontmatter.pubDate.toString().slice(0, 10)}</p>
     </div>
   </div>
 
-    <div class="page-line blog w-full md:w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%]"></div>
+    <div class="page-line blog"></div>
 
-  <div class="xl:px-[60px]">
+  <div class="">
     <h3 class="post-subtitle">{frontmatter.description}</h3>
   </div>
 </div>
