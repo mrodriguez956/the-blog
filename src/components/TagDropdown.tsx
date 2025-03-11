@@ -5,7 +5,7 @@ import styles from '../styles/custom98test.module.css';
 function DropDownComponent({ tag }: { tag: string }) {
     return (
         <>
-           <option> {tag} </option>
+           <option value={`/the-blog/tags/${tag}`}> {tag} </option>
 
         </>
     );

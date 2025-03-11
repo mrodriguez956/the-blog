@@ -28,9 +28,9 @@ const tags = [
         ))
       }
 
-      <select class="flex lg:hidden">
+      <select  onchange="window.location.href=this.value" class="flex lg:hidden" >
         <option selected>- by Tag -</option>
-        {tags.map((tag) => <DropdownButton tag={tag} client:visible />)}
+        {tags.map((tag) => <DropdownButton tag={tag}  client:visible />)}
       </select>
     </div>
   </div>

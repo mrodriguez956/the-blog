@@ -27,10 +27,12 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <div class="page-title flex justify-between items-end mb-[10px]">
+  <div class="px-[120px]">
+  <div class="flex justify-between items-end mb-[10px]">
   <h2 class="pt-[80px]">{tag} POSTS</h2>
   </div>
   <div class="page-line blog"></div>
+  </div>
   <div class="grid grid-cols-3 text-center main-font gap-4 px-[120px] py-[80px]">
     {
       posts.map((post: any) => (
