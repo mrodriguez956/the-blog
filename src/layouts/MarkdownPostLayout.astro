@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout>
   <img
     class="w-full h-[240px] md:h-[480px] lg:h-[600px] object-cover object-center"
-    src={frontmatter.image.url}
+    src={frontmatter.image.url || 'https://placecats.com/800/1200?fit=contain&position=top'}
   />
   <div class="page-scaling">
     <div class="tags pt-[10px] gap-3">
