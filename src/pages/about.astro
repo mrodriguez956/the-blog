@@ -7,15 +7,15 @@ const finished = true;
 const goal = 3;
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
+  firstName: "Michael",
+  country: "Texas",
+  occupation: "Help Desk Support Technician",
+  hobbies: ["gaming", "web dev", "card collecting"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs", "Technical Support", "Graphic Design", "UI/UX"];
 
-const skillColor = "navy";
+const skillColor = "white";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
@@ -52,17 +52,6 @@ const textCase = "uppercase";
       realm. Think 90s nostalgia meets modern web dev.
     </p>
 
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {
-      goal === 3 ? (
-        <p>My goal is to finish in 3 days.</p>
-      ) : (
-        <p>My goal is not 3 days.</p>
-      )
-    }
 
     <p>Here are a few facts about me:</p>
     <ul>
