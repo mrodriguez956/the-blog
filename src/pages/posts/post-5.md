@@ -10,17 +10,27 @@ image:
 tags: ["gaming", "blogging", "learning in public"]
 ---
 
-Dead by Daylight is one of my most played games of all time since its release in 2016. As a fan of the horror genre across all mediums, with a longing for a return to the 90s aesthetic, Dead by Daylight serves as a melting pot of horror icons that has shaped my love for the simplicity of 90s horror. So naturally, in 2018, I was inspired to take the horror themes of the game and merge them with the neon flair the 90s are most known for. Thus, the 90s Perk Pack was born.
+Dead by Daylight is one of my most played games of all time since its release in 2016. As a fan of the horror genre across all mediums, with a longing for a return to the 90s aesthetic, Dead by Daylight serves as a melting pot of horror icons that has shaped my love for the simplicity of 90s horror.
 
-Starting off as a personal project during my time as a full-time student, I only had one type of icon theme at the time, so there wasn’t much need to optimize or streamline my workflow. If new icons were released, I would open Photoshop and get to work. However, with each screenshot I shared among friends and later on social media, my icons quickly gained the attention of hundreds of others who are just as nostalgic. Over 2,000 upvotes on Reddit, 10,000 visitors on Steam Community pages, and over 5,000 (documented since 2023) downloads later, it was clear that this pack was more than just my own. Even more so, with comments, friend requests, and messages still coming in asking for "moar icons" or the next update, this pack had taken on a life of its own—one I simply could not easily maintain with my current workflow as time went on.
+So naturally, in 2018, I was inspired to take the horror themes of the game and merge them with the neon flair the 90s are most known for. Thus, the 90s Perk Pack was born.
+
+Starting off as a personal project during my time as a full-time student, I only had one type of icon theme at the time, so there wasn’t much need to optimize or streamline my workflow. If new icons were released, I would open Photoshop and get to work.
+
+However, with each screenshot I shared among friends and later on social media, my icons quickly gained the attention of hundreds of others who are just as nostalgic. Over 2,000 upvotes on Reddit, 10,000 visitors on Steam Community pages, and over 5,000 (documented since 2023) downloads later, it was clear that this pack was more than just my own.
+
+Even more so, with comments, friend requests, and messages still coming in asking for "moar icons" or the next update, this pack had taken on a life of its own—one I simply could not easily maintain with my current workflow as time went on.
 
 ## The Vision
 
-It was time for a solution—one that would prove useful even if it was only just for me. As someone with a constant itch for a new web dev project, my vision from the start was to make a tool available on the web that would take blank images from Dead by Daylight and apply the same bells and whistles I handcrafted in Photoshop, but in a matter of seconds.
+It was time for a solution—one that would prove useful even if it was only just for me.
+
+As someone with a constant itch for a new web dev project, my vision from the start was to make a tool available on the web that would take blank images from Dead by Daylight and apply the same bells and whistles I handcrafted in Photoshop, but in a matter of seconds.
 
 ## Getting Started
 
-The starting point for my stack was **Bun, React, TypeScript, JSZip, and Tailwind CSS**. My first order of business was establishing a method for retrieving files from the end-user. Since Dead by Daylight often adds multiple new icons at a time, it’s important for users to be able to upload all of them at once to minimize repetition. The simple `multiple` attribute on a file input does the trick:
+The starting point for my stack was **Bun, React, TypeScript, JSZip, and Tailwind CSS**.
+
+My first order of business was establishing a method for retrieving files from the end-user. Since Dead by Daylight often adds multiple new icons at a time, it’s important for users to be able to upload all of them at once to minimize repetition. The simple `multiple` attribute on a file input does the trick:
 
 ```html
 <input type="file" multiple />
@@ -35,9 +45,7 @@ Dead by Daylight icons are strictly `.png` files, so preventing other file types
 When files are uploaded, we need to store specific information for each file in an array:
 
 - The file name (without the extension)
-    
 - The image data as a Data URL
-    
 
 This is where our `uploadFiles()` function comes in. It iterates through each selected file, performs a quick check to ensure it's a PNG (though the `accept` attribute helps here!), then reads the file as a Data URL and adds it to our `fileData` React state variable—effectively creating an array of objects, each representing an uploaded image.
 
@@ -64,7 +72,9 @@ function uploadFiles(event) {
 }
 ```
 
-**Why use a Data URL?** A Data URL encodes the image as a string, making it easy to display in the browser or pass to image manipulation libraries—no need to upload the file to a server or worry about file paths.
+**Why use a Data URL?**
+
+A Data URL encodes the image as a string, making it easy to display in the browser or pass to image manipulation libraries—no need to upload the file to a server or worry about file paths.
 
 **What does `fileData` look like?**
 
@@ -80,9 +90,13 @@ This array will be passed to the image manipulation part of the app (coming soon
 
 ## The Difficult Part
 
-Establishing the flow of this program would be for nothing if there wasn't an end result. Which brings me to the most painful (but rewarding!!) part of this project: the image manipulation. On paper, the goal is quite simple. There are a ton of programs with varying levels of complexity that have already established the concept of layers, clipping, gradients, and adding stroke outlines. But automating that magic in a browser to work with any compatible image the end user desires? There were many times I hit a brick wall.
+Establishing the flow of this program would be for nothing if there wasn't an end result. Which brings me to the most painful (but rewarding!!) part of this project: the image manipulation.
 
-That first wall was deciding on a library to simplify this process. The HTML5 `<canvas>` element provides a powerful API for rendering custom graphics and animations directly in the browser. However, I did not want to reinvent the wheel if I didn't have to. To my surprise, there were two very popular libraries that make canvas much easier to work with: **Konva.js** and **Fabric.js**. Both of these libraries achieved just about everything I needed and more, but one particular difference ultimately brought me to Fabric.js... the documentation.
+On paper, the goal is quite simple. There are a ton of programs with varying levels of complexity that have already established the concept of layers, clipping, gradients, and adding stroke outlines. But automating that magic in a browser to work with any compatible image the end user desires? There were many times I hit a brick wall.
+
+That first wall was deciding on a library to simplify this process. The HTML5 `<canvas>` element provides a powerful API for rendering custom graphics and animations directly in the browser. However, I did not want to reinvent the wheel if I didn't have to.
+
+To my surprise, there were two very popular libraries that make canvas much easier to work with: **Konva.js** and **Fabric.js**. Both of these libraries achieved just about everything I needed and more, but one particular difference ultimately brought me to Fabric.js... the documentation.
 
 For my use-case, I needed to use the uploaded image as a **clipping mask** for a predefined gradient image, and then apply a stroke to that masked image. A casual scroll through the Konva.js documentation might suggest that clipping is straightforward—however, this taught me a very important lesson in thorough research. While Konva.js supports clipping, it **does not natively support using images as clipping masks**. The only definitive answers I found were buried in the comments section of their official website. It's safe to say this was a significant time sink. Although an active moderator of the Konva webpage mentioned a workaround, I wasn't interested in diving deeper into a less direct solution.
 
@@ -109,13 +123,9 @@ const fabricImage = new FabricImage(gradImage, {
 **How does this work?**
 
 - `gradImage` is your gradient or background image.
-    
 - `iconImage` is the user-uploaded icon.
-    
 - The `clipPath` property takes another Fabric image (in this case, the icon) and uses it as a mask. Only the parts of the gradient that overlap with the icon shape will be visible.
-    
 - All positioning and sizing is handled in the options objects.
-    
 
 ## Stroke Outline Nightmare
 
@@ -167,11 +177,8 @@ With all the icons processed, the last step is to make it easy for users to down
 The process is simple:
 
 - Create a new zip archive.
-    
 - Add each processed icon as a PNG file.
-    
 - Generate the zip and trigger a download.
-    
 
 Here’s a taste of that code:
 
@@ -217,8 +224,6 @@ export function DownloadZip({ files }) {
 }
 ```
 
-
-  
 ## Debugging
 
 After creating the zip file, it’s easy to think we can just call it a day and deploy. But I knew better, and put my program through intense testing. This testing was performed at every forward progress made as new functionality was added, so there wasn’t anything too serious.
@@ -228,18 +233,13 @@ BUT there were some unique issues that appeared. Most of which came from uploadi
 Our recurring issue: Random files would be excluded
 
 - Multiple icons would be added to the same image, stacking on top of each other.
-    
 - Sometimes, not all uploaded files would be processed, or the output would be inconsistent.
-    
 
 The main culprit was the asynchronous loading of images and the way browser events fire when handling multiple files. If you don’t carefully coordinate when your code proceeds, you can end up:
 
 - Processing images before they’re fully loaded,
-    
 - Running the same processing logic multiple times,
-    
 - Or missing files entirely due to race conditions.
-    
 
 ### The Fix: Robust Asynchronous Handling
 
@@ -297,16 +297,16 @@ const handleAddNewURL = (name: string, data: string) => {
 
 And in my uploader, I used a processing flag to prevent duplicate uploads:
 
-
 ```tsx
 setIsProcessing(true); // Prevent duplicate uploads
 // ...
 setIsProcessing(false); // After all files are processed
 ```
 
-
 ## The Road Ahead
 
 With just a few clicks, users can upload their blank icons, preview the themed icons, and download a zip file packed with sweet nostalgia, no Photoshop needed.
 
-I am confident in sharing the progress I have made so far with the public for use, however the project is far from over. I have a few changes planned to make the UI more engaging and authentic, and make the background processes more efficient. At the time of writing this, I am not even sure when I will ever be truly done with this project. It is fueled by passion, and as long as that's the case you can expect to see many changes in the future. 
+I am confident in sharing the progress I have made so far with the public for use, however the project is far from over. I have a few changes planned to make the UI more engaging and authentic, and make the background processes more efficient.
+
+At the time of writing this, I am not even sure when I will ever be truly done with this project. It is fueled by passion, and as long as that's the case you can expect to see many changes in the future. 
