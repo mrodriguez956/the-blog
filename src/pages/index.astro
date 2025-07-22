@@ -2,10 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
 const pageTitle = "Michael Rodriguez | Web Developer Portfolio";
+
+import "../styles/global.css";
 ---
 <BaseLayout pageTitle={pageTitle}>
+<div class="scanlines"></div>
   <div class="page-line index">
+
   <div class="main-font flex flex-col justify-center items-center h-full">
+    <video id="myVideo" class="video-overlay" width="1920" height="1080"  src="/src/assets/img/static.mp4" autoplay muted></video>
+
   
   <h3>michael rodriguez presents</h3>
   <h2 class="front-page">THE PORTFOLIO</h2>
