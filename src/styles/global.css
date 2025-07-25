@@ -395,3 +395,57 @@ h3.horror-subtitle {
     transparent 100%
   );
 }
+
+
+/*button styling*/
+
+        .button-label
+        {
+            color: #ffffff; /* White text for contrast */
+        }
+
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #2a2a2a; /* Base color of the individual button block */
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease-out; /* Smooth transitions for hover/active */
+            user-select: none;
+            position: relative; /* For the red light */
+
+            /* Main button block shadows */
+            box-shadow:
+                /* Top highlight */
+                0px 1px 1px rgba(255, 255, 255, 0.08) inset,
+                /* Bottom shadow */
+                0px -1px 1px rgba(0, 0, 0, 0.3) inset,
+                /* Outer soft shadow for depth */
+                0px 3px 6px 0px rgba(0, 0, 0, 0.4),
+                /* Subtle top-left light source simulation */
+                -1px -1px 2px rgba(255, 255, 255, 0.05);
+        }
+
+                .button-wrapper:hover {
+            background-color: #333;
+            box-shadow:
+                0px 1px 1px rgba(255, 255, 255, 0.1) inset,
+                0px -1px 1px rgba(0, 0, 0, 0.4) inset,
+                0px 5px 10px rgba(0, 0, 0, 0.6),
+                -1px -1px 3px rgba(255, 255, 255, 0.1);
+            transform: translateY(.5px); /* Slight lift on hover */
+        }
+
+        .button-wrapper:active {
+            background-color: #222;
+            transform: translateY(2px); /* Press down effect */
+            box-shadow:
+                0px 2px 3px rgba(0, 0, 0, 0.6) inset, /* Deeper inner shadow on press */
+                0px -2px 3px rgba(255, 255, 255, 0.03) inset,
+                0px 1px 3px rgba(0, 0, 0, 0.2); /* Reduced outer shadow */
+        }

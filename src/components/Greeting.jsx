@@ -18,11 +18,17 @@ export default function Greeting({ messages }) {
   };
 
   return (
+    <>
+    
     <div className='text-center'>
       <h3 className="horror-subtitle">{greeting}</h3>
-      <button onClick={handleButtonClick}>
-        🔄️
+
+    </div><button onClick={handleButtonClick} class="button-wrapper">
+        <span class="button-label"><i class="fa-solid fa-forward-step"></i></span>
       </button>
-    </div>
+      
+      </>
+
+    
   );
 }
